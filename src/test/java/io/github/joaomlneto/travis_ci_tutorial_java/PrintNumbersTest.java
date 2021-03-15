@@ -14,12 +14,21 @@ public class PrintNumbersTest {
 	private final PrintStream standardOut = System.out;
 	private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
 
+<<<<<<< HEAD
+=======
+	@Test
+	public void testTest() {
+		assertEquals(true, true);
+	}
+
+>>>>>>> 8a32cea4f739c04ffd6dcbdd4648b51541cd8753
 	@Before
 	public void setUp() {
 		System.setOut(new PrintStream(outputStreamCaptor));
 	}
 
 	@Test
+<<<<<<< HEAD
     public void printNumbers_10() {
 		PrintNumbers.printNumbersInRange(10);
 		assertEquals("1, 2, 3, 4, 5, 6, 7, 8, 9, 10", outputStreamCaptor.toString().trim());
@@ -43,6 +52,13 @@ public class PrintNumbersTest {
 		assertEquals("", outputStreamCaptor.toString().trim());
 	}
 
+=======
+    public void printLoop() {
+		PrintNumbers.printLoop(10);
+		assertEquals("1, 2, 3, 4, 5, 6, 7, 8, 9, 10", outputStreamCaptor.toString().trim());
+	}
+
+>>>>>>> 8a32cea4f739c04ffd6dcbdd4648b51541cd8753
 	@After
 	public void tearDown() {
 		System.setOut(standardOut);
